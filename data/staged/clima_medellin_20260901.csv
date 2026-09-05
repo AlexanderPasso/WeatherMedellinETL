@@ -1,0 +1,25 @@
+,Fecha,Hora,Condicion_Clima,Temperatura,Lluvia,Probabilidad_Lluvia
+0,2026-09-01,0,Fog,12.9,0,56
+1,2026-09-01,1,Light rain shower,13.5,1,76
+2,2026-09-01,2,Light rain shower,13.6,0,58
+3,2026-09-01,3,Light rain shower,13.6,1,78
+4,2026-09-01,4,Fog,13.3,0,51
+5,2026-09-01,5,Fog,13.0,0,51
+6,2026-09-01,6,Light rain shower,13.4,0,58
+7,2026-09-01,7,Light rain shower,13.8,0,44
+8,2026-09-01,8,Patchy rain nearby,15.4,0,53
+9,2026-09-01,9,Moderate rain at times,17.3,0,59
+10,2026-09-01,10,Light rain shower,18.4,0,62
+11,2026-09-01,11,Light rain shower,19.1,0,60
+12,2026-09-01,12,Light rain shower,19.5,0,54
+13,2026-09-01,13,Patchy rain nearby,19.4,0,47
+14,2026-09-01,14,Light rain shower,21.2,0,40
+15,2026-09-01,15,Light rain shower,20.7,0,37
+16,2026-09-01,16,Light rain shower,19.6,0,36
+17,2026-09-01,17,Light rain shower,17.5,1,71
+18,2026-09-01,18,Light rain shower,14.9,1,70
+19,2026-09-01,19,Light rain shower,13.8,0,53
+20,2026-09-01,20,Fog,13.4,0,48
+21,2026-09-01,21,Fog,13.1,0,50
+22,2026-09-01,22,Fog,12.9,0,54
+23,2026-09-01,23,Fog,13.0,0,45
