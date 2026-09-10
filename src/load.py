@@ -14,7 +14,5 @@ df= pd.concat(lista_df, ignore_index=True)
 if 'Unnamed: 0' in df.columns:
         df = df.drop(columns=['Unnamed: 0'])
         
-print(df)
-
 df.to_csv(f"data/master/clima_medellin.csv")
 
