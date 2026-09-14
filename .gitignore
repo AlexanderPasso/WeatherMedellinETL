@@ -3,16 +3,28 @@ __pycache__/
 *.py[cod]
 *.pyo
 
-# Environment variables
+# Entornos virtuales
+.venv/
+venv/
+env/
+
+# Variables de entorno
 .env
-.env.*
+
+# Streamlit secrets
+.streamlit/secrets.toml
+
+# AWS / Lambda
+lambda_package/
+lambda_function.zip
+
+# Datos locales
+data/raw/
+data/staged/
+data/master/
 
 # Jupyter
 .ipynb_checkpoints/
-
-# Virtual environments
-venv/
-.venv/
 
 # VS Code
 .vscode/

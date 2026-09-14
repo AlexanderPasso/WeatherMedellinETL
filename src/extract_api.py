@@ -1,24 +1,29 @@
-import sys   #Directorio raiz
-from pathlib import Path
-import utils as funciones
-import json
 from datetime import datetime
-
-# Obtener la ruta del directorio raíz del proyecto (un nivel arriba de /src)
-ROOT_DIR = Path(__file__).resolve().parent.parent
-sys.path.append(str(ROOT_DIR))
-
-# Ahora tus importaciones funcionarán sin importar desde dónde ejecutes el script
-from config.config import API_KEY_WAPI
+from zoneinfo import ZoneInfo
 
 
-response = funciones.request_api_weather('Medellín', API_KEY_WAPI)
-
-#Obtener fecha de ejecucion diaria
-cutoff_date = datetime.now().strftime("%Y%m%d")
-ruta_destino = Path(f"data/raw/clima_medellin_{cutoff_date}.json")
+import utils as funciones
 
 
-#Guardar el archivo JSON
-with open(ruta_destino, "w", encoding="utf-8") as f:
-    json.dump(response, f, ensure_ascii=False, indent=4)
+def extract_data(api_key):
+    """
+    Extrae los datos de clima desde Weather API.
+    """
+
+    print("Consultando Weather API...")
+
+    response = funciones.request_api_weather(
+        "Medellín",
+        api_key
+    )
+
+    cutoff_date = datetime.now(
+        ZoneInfo("America/Bogota")
+    ).strftime("%Y%m%d")
+
+    print(
+        f"Extracción completada. "
+        f"Fecha de ejecución: {cutoff_date}"
+    )
+
+    return response, cutoff_date

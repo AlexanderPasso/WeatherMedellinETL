@@ -1,17 +1,20 @@
-import sys   #Directorio raiz
-from pathlib import Path
 import utils as funciones
-import json
-from datetime import datetime
-import pandas as pd
 
 
+def transform_data(raw_data):
+    """
+    Transforma la respuesta JSON en un DataFrame.
+    """
 
-cutoff_date = datetime.now().strftime("%Y%m%d")
-load_json = pd.read_json(f"data/raw/clima_medellin_{cutoff_date}.json")
-df = funciones.create_dataFrame(load_json)
+    print("Transformando datos...")
 
-df.to_csv(f"data/staged/clima_medellin_{cutoff_date}.csv")
+    df = funciones.create_dataFrame(
+        raw_data
+    )
 
+    print(
+        f"Transformación completada. "
+        f"Registros: {len(df)}"
+    )
 
-
+    return df
