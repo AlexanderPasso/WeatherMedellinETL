@@ -1,9 +1,13 @@
 ## 🌤️ Weather Medellín ETL
 
 ```
-Pipeline de Data Engineering desarrollado en Python para la extracción, transformación y almacenamiento automatizado de información meteorológica de Medellín utilizando WeatherAPI, AWS y Streamlit.
+Pipeline de Data Engineering desarrollado en Python para la extracción,
+ transformación y almacenamiento automatizado de información meteorológica
+  de Medellín utilizando WeatherAPI, AWS y Streamlit.
 
-El proyecto implementa un flujo ETL automatizado en la nube, almacenando los datos procesados en Amazon S3 y proporcionando un dashboard interactivo para su visualización.
+El proyecto implementa un flujo ETL automatizado en la nube, 
+almacenando los datos procesados en Amazon S3 y proporcionando un dashboard 
+interactivo para su visualización.
 ```
 
 ## 📌 Descripción del proyecto
