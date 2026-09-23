@@ -4,7 +4,12 @@ import boto3
 import pandas as pd
 import plotly.express as px
 import streamlit as st
+from datetime import datetime
+from zoneinfo import ZoneInfo
 
+cutoff_date_act = datetime.now(
+        ZoneInfo("America/Bogota")
+    ).strftime("%Y%m%d")
 
 st.set_page_config(
     page_title="Clima Medellín",
@@ -68,7 +73,7 @@ columna_target = opciones_metricas[metrica_seleccionada]
 if not df.empty and columna_target in df.columns:
 
     val_actual = df[columna_target].iloc[-1]
-    val_max = df[columna_target].max()
+    val_max = df[columna_target].where(df["Fecha"]==cutoff_date_act).max()
     val_prom = df[columna_target].mean()
 
     col1, col2, col3 = st.columns(3)
