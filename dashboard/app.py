@@ -74,7 +74,7 @@ if not df.empty and columna_target in df.columns:
 
     val_actual = df[columna_target].iloc[-1]
     val_max = df.loc[df["Fecha"] == cutoff_date_act,columna_target].max()
-    val_prom = df[columna_target].mean()
+    val_prom = df.loc[df["Fecha"] == cutoff_date_act,columna_target].mean()
 
     col1, col2, col3 = st.columns(3)
 
